@@ -1,32 +1,16 @@
 class Rectangle:
     def __init__(self, length, width):
-        self._length = length
-        self._width = width
-        self._update_perimeter_and_area()
-
-    def _update_perimeter_and_area(self):
-        self._perimeter = self._length * 2 + self._width * 2
-        self._area = self._length * self._width
+        self.length = length
+        self.width = width
 
     def get_perimeter(self):
-        return self._perimeter
+        return 2 * (self.length + self.width)
 
     def get_area(self):
-        return self._area
-
-    def set_length(self, length):
-        self._length = length
-        self._update_perimeter_and_area()
-
-    def set_width(self, width):
-        self._width = width
-        self._update_perimeter_and_area()
+        return self.length * self.width
 
     perimeter = property(get_perimeter)
     area = property(get_area)
-
-    length = property(lambda self: self._length, set_length)
-    width = property(lambda self: self._width, set_width)
 
 
 rectangle = Rectangle(4, 5)
