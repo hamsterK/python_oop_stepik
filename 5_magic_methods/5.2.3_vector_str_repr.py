@@ -9,8 +9,8 @@ class Vector:
     def __repr__(self):
         return f"Vector({self.x}, {self.y})"
 
-    vector = Vector(1, 2)
+vector = Vector(1, 2)
 
-    print(str(vector))
-    print(repr(vector))
+print(str(vector))
+print(repr(vector))
     
