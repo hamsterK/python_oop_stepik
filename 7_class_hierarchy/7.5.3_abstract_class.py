@@ -51,6 +51,7 @@ class String(Validator):
         if self.predicate is not None and not self.predicate(value):
             raise ValueError('Устанавливаемая строка не удовлетворяет дополнительным условиям')
 
+
 class Student:
     age = Number(18, 99)
 
